@@ -1,3 +1,3 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:11-jdk
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
