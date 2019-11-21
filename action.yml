@@ -1,5 +1,19 @@
 name: 'Build and publish'
 description: 'Builds and publishes the result to dockerhub'
+inputs:
+  dockerhub-login:
+    description: 'Dockerhub login'
+    required: true
+  dockerhub-password:
+    description: 'Dockerhub password'
+    required: true
+  application-name:
+    description: 'Application name'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.dockerhub-login }}
+    - ${{ inputs.dockerhub-password }}
+    - ${{ inputs.application-name }}

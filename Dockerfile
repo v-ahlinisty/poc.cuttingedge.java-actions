@@ -1,3 +1,3 @@
 FROM openjdk:11-jdk
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+COPY build-and-publish.sh /build-and-publish.sh
+ENTRYPOINT ["/build-and-publish.sh"]
