@@ -1,0 +1,5 @@
+name: 'Build and publish'
+description: 'Builds and publishes the result to dockerhub'
+runs:
+  using: 'docker'
+  image: 'antonhlinistyepam/gh-java-workflow'
